@@ -1,0 +1,144 @@
+:root {
+    --purple: #4A0374;
+    --yellow: #F9A620;
+    --white: #F4F4F9;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+.create-study {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.study-form-container {
+    position: relative;
+}
+
+.step-indicator {
+    position: absolute;
+    top: -2rem;
+    right: 1rem;
+    color: var(--white);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.step-text {
+    font-weight: 600;
+}
+
+.step-count {
+    opacity: 0.8;
+}
+
+.form-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-card h1 {
+    color: var(--purple);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.subtitle {
+    color: var(--purple);
+    margin-bottom: 2rem;
+    font-family: 'Calibri Light', 'Segoe UI', sans-serif;
+}
+
+.study-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+label {
+    color: var(--purple);
+    font-weight: 600;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+input,
+select {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--purple);
+}
+
+input::placeholder {
+    color: #999;
+    font-family: 'Calibri Light', 'Segoe UI', sans-serif;
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23666' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    padding-right: 2.5rem;
+}
+
+.generate-btn {
+    background: var(--yellow);
+    color: var(--purple);
+    border: none;
+    border-radius: 30px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.generate-btn:hover {
+    background: #e89518;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .create-study {
+        padding: 1rem;
+    }
+
+    .form-card {
+        padding: 1.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-card h1 {
+        font-size: 1.5rem;
+    }
+}

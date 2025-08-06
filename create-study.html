@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Study - EngageWise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="create-study.css">
+    <script src="create-study.js" defer></script>
+</head>
+
+<body>
+    <div class="background-wrapper">
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="homepage.html">
+                        <img src="assets/Clear for dark background.png" alt="EngageWise Logo" class="nav-logo">
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Pricing</a>
+                    <a href="#" class="user-profile">My Account</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="create-study">
+            <div class="study-form-container">
+                <div class="step-indicator">
+                    <span class="step-text">Step 1</span>
+                    <span class="step-count">/ 2</span>
+                </div>
+
+                <div class="form-card">
+                    <h1>Tell Us About Your Study</h1>
+                    <p class="subtitle">Input your study context to receive evidence-based recommendations, tailored to
+                        your study.</p>
+
+                    <form id="studyForm" class="study-form">
+                        <div class="form-group">
+                            <label for="studyTitle">Study Title</label>
+                            <input type="text" id="studyTitle" name="studyTitle" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="diseaseArea">Disease Area</label>
+                                <select id="diseaseArea" name="diseaseArea" required>
+                                    <option value="" disabled selected>Select disease area</option>
+                                    <option value="cancer">Cancer</option>
+                                    <option value="cardiovascular">Cardiovascular</option>
+                                    <option value="diabetes">Diabetes</option>
+                                    <option value="infectious-disease">Infectious Disease</option>
+                                    <option value="primary-care">Primary Care</option>
+                                    <option value="child-health">Child Health</option>
+                                    <option value="injury-prevention">Injury Prevention</option>
+                                    <option value="womens-health">Women's Health</option>
+                                    <option value="geriatrics">Geriatrics</option>
+                                    <option value="public-health">Public Health</option>
+                                    <option value="methodology">Methodology</option>
+                                    <option value="multimorbidity">Multimorbidity</option>
+                                    <option value="addiction">Addiction</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select id="gender" name="gender" required>
+                                    <option value="" disabled selected>Select gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="all">All</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ageGroup">Age Group</label>
+                            <input type="text" id="ageGroup" name="ageGroup" placeholder="Children, Adults, Seniors"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="studySetting">Study Setting</label>
+                            <input type="text" id="studySetting" name="studySetting"
+                                placeholder="hospital, online, screening" required>
+                        </div>
+
+                        <button type="submit" class="generate-btn">Generate Recommendations</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <div class="background-dots">
+            <div class="dot dot-1"></div>
+            <div class="dot dot-2"></div>
+            <div class="dot dot-3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

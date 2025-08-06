@@ -1,0 +1,274 @@
+:root {
+    --purple: #4A0374;
+    --yellow: #F9A620;
+    --white: #F4F4F9;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+/* Hero Section */
+.story-hero {
+    padding: 2rem 0 1.5rem;
+    background-color: var(--purple);
+}
+
+.story-hero h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--white);
+    margin: 0;
+    text-align: center;
+}
+
+/* Founder Section */
+.founder-section {
+    padding: 0 0 3rem;
+    background-color: var(--purple);
+}
+
+.founder-content {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+.founder-image-container {
+    flex: 0 0 auto;
+    width: 220px;
+    background: var(--white);
+    border-radius: 24px;
+    padding: 12px;
+    position: relative;
+    border: 2px solid var(--yellow);
+}
+
+.founder-image {
+    position: relative;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.founder-image img {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
+}
+
+.founder-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3rem 1rem 0.75rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 0 0 16px 16px;
+}
+
+.founder-info h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--white);
+    margin: 0;
+}
+
+.founder-title {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.9rem;
+    color: var(--white);
+    margin: 0.25rem 0 0;
+    opacity: 0.9;
+}
+
+.founder-description {
+    flex: 1;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: var(--white);
+    margin: 0;
+    padding-top: 0.5rem;
+    max-width: 650px;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 1.5rem 0;
+    background-color: var(--white);
+}
+
+.cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.cta-content p {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.1rem;
+    color: var(--purple);
+    margin: 0;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--yellow);
+    color: var(--purple);
+    text-decoration: none;
+    border-radius: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.cta-button::after {
+    content: "→";
+    margin-left: 0.5rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.cta-button:hover {
+    background-color: #fbb540;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    background-color: var(--purple);
+    padding: 3rem 0;
+}
+
+.testimonial-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.testimonial-content blockquote {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--yellow);
+    margin: 0 0 1.5rem;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.testimonial-author {
+    color: var(--white);
+}
+
+.testimonial-author p {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0.2rem 0;
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+/* Features Section */
+.features-section {
+    padding: 3rem 0 4rem;
+    background-color: var(--purple);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: 1px solid rgba(74, 3, 116, 0.1);
+}
+
+.feature-card h3 {
+    font-family: 'Inter', sans-serif;
+    color: var(--purple);
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.feature-card p {
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--purple);
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .container {
+        padding: 0 2rem;
+    }
+
+    .founder-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .founder-image {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        aspect-ratio: 1;
+        margin: 0 auto;
+    }
+
+    .founder-description {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .story-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .testimonial-content blockquote {
+        font-size: 1.3rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .cta-content {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .story-hero h1 {
+        font-size: 2rem;
+    }
+}

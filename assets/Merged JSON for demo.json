@@ -1,0 +1,1104 @@
+[
+  {
+    "study_metadata": {
+      "title": "Breast cancer prevention in community clinics: will low-income Latina patients participate in clinical trials?",
+      "authors": [
+        "Jeanne Mandelblatt", "Elizabeth Kaufman", "Vanessa B. Sheppard",
+        "Jyl Pomeroy", "John Kavanaugh", "Janet Canar", "Laura Pallandre",
+        "Jennifer Cullen", "Elmer Huerta"
+      ],
+      "year": 2005,
+      "journal": "Preventive Medicine",
+      "doi": "10.1016/j.ypmed.2004.09.004",
+      "disease_area_1": "Cancer",
+      "disease_area_2": "Women's Health",
+      "effect_direction": "positive",
+      "study_type": "Recruitment intervention",
+      "study_design": "Randomized controlled trial",
+      "geographical_location": ["United States"],
+      "ethical_approval": "IRB approved"
+    },
+    "sample": {
+      "sample_size": 450,
+      "age": { "mean": null, "range": [null, null], "categories": [""] },
+      "sex": { "male": 0, "female": 450, "other": 0 },
+      "ethnicity": ["Latina"],
+      "SES": { "indicators": "Low income, uninsured", "categories": ["Low income"] },
+      "country_of_birth": [""],
+      "other_demographics": {
+        "marital_status": [""],
+        "education_level": [""],
+        "language": ["Spanish", "English"],
+        "employment_status": [""]
+      },
+      "inclusion_criteria": [
+        "Potential eligibility for STAR trial (breast cancer risk factors, no prior exclusion)",
+        "Patients at three community clinics"
+      ],
+      "exclusion_criteria": [""]
+    },
+    "study_context": {
+      "setting": "Community clinics in Washington, DC, and Virginia",
+      "recruitment_channels": ["Clinic screening at appointments"],
+      "population_group": ["Low-income, Spanish-speaking Latinas"],
+      "country_income_level": "High"
+    },
+    "intervention_details": [
+      {
+        "name": "Brief counseling plus print materials",
+        "description": "Nonphysician-delivered education session and informational brochure",
+        "comparison_group": "Brochure only",
+        "timing_and_duration": "Single session, randomized by clinic day"
+      }
+    ],
+    "outcomes": {
+      "primary": [
+        {
+          "name": "Intent to participate in STAR trial",
+          "definition": "Response to 'might', 'probably', or 'definitely' would participate",
+          "result": "72% overall; less with mention of side effects"
+        }
+      ],
+      "secondary": [
+        {
+          "name": "Knowledge about breast cancer/trials",
+          "definition": "Knowledge test score",
+          "result": "66% correct (breast cancer); 40.5% (trial knowledge)"
+        }
+      ]
+    },
+    "recruitment_and_retention": {
+      "strategies": ["Culturally and linguistically adapted educational intervention"],
+      "summary": "Latina women expressed high interest; intent dropped with mention of side effects.",
+      "recruitment_numbers": {
+        "screened": 450,
+        "eligible": 450,
+        "consented": 432,
+        "randomized": 450,
+        "completed": 450,
+        "retained_at_primary_endpoint": null
+      },
+      "timeline": "October 2002–January 2003"
+    },
+    "findings_and_implications": {
+      "key_findings": "Latinas are interested in prevention trials, but side effect info reduces intention.",
+      "patient_knowledge": "Moderate; knowledge higher for breast cancer than for trials",
+      "patient_satisfaction": "",
+      "informed_consent_quality": "",
+      "impact_on_underrepresented_groups": "Addresses barriers for Latina, low-SES populations",
+      "cost_effectiveness": "",
+      "authors_conclusions": "Education boosts interest, but side effect info deters; future work should focus on qualitative research.",
+      "implications_for_future_research": "Explore theory and context for preventive trial participation in Latinas."
+    },
+    "tables_and_figures": [""],
+    "notes": "All participants Latina, low-income, mostly Spanish-speaking. Focused on intent, not actual enrollment."
+  },
+  {
+    "study_metadata": {
+      "title": "Effects of disclosing financial interests on participation in medical research: A randomized vignette trial",
+      "authors": [
+        "Kevin P. Weinfurt", "Mark A. Hall", "Joëlle Y. Friedman", "N. Chantelle Hardy",
+        "Alice K. Fortune-Greeley", "Janice S. Lawlor", "Jennifer S. Allsbrook", "Li Lin",
+        "Kevin A. Schulman", "Jeremy Sugarman"
+      ],
+      "year": 2008,
+      "journal": "American Heart Journal",
+      "doi": "10.1016/j.ahj.2008.06.001",
+      "disease_area_1": "Cardiology",
+      "disease_area_2": "Ethics",
+      "effect_direction": "negative",
+      "study_type": "Survey-based vignette trial",
+      "study_design": "Randomized vignette study",
+      "geographical_location": ["United States"],
+      "ethical_approval": "IRB-approved (Duke, Johns Hopkins, Wake Forest)"
+    },
+    "sample": {
+      "sample_size": 470,
+      "age": { "mean": 66.9, "range": [null, null], "categories": [""] },
+      "sex": { "male": 347, "female": 123, "other": 0 },
+      "ethnicity": ["White", "Black", "Hispanic", "Other"],
+      "SES": { "indicators": "Education and income collected", "categories": [""] },
+      "country_of_birth": [""],
+      "other_demographics": {
+        "marital_status": [""],
+        "education_level": [""],
+        "language": [""],
+        "employment_status": [""]
+      },
+      "inclusion_criteria": [
+        "Diagnosis of coronary artery disease",
+        "Aged 18 or older",
+        "Able to complete telephone survey"
+      ],
+      "exclusion_criteria": [""]
+    },
+    "study_context": {
+      "setting": "Telephone survey/vignette",
+      "recruitment_channels": ["Mailed letter from cardiologist, followed by telephone call"],
+      "population_group": ["Adults with coronary artery disease"],
+      "country_income_level": "High"
+    },
+    "intervention_details": [
+      {
+        "name": "Financial disclosure statement in consent",
+        "description": "Simulated informed consent describing (1) per capita payment, (2) equity ownership, or (3) no disclosure",
+        "comparison_group": "Between-group, randomized",
+        "timing_and_duration": "Simulated consent read during follow-up phone call"
+      }
+    ],
+    "outcomes": {
+      "primary": [
+        {
+          "name": "Willingness to participate",
+          "definition": "Likert-scale rating after reviewing consent",
+          "result": "Lower in equity group (mean 3.20) than per capita (3.51) or no disclosure (3.50)"
+        }
+      ],
+      "secondary": [
+        {
+          "name": "Trust in investigator",
+          "definition": "Likert-scale score",
+          "result": "Highest in per capita group, lowest in equity group"
+        }
+      ]
+    },
+    "recruitment_and_retention": {
+      "strategies": ["Disclosure framing during consent"],
+      "summary": "Equity interest disclosures reduced willingness and trust more than per capita or no disclosure.",
+      "recruitment_numbers": {
+        "screened": 2840,
+        "eligible": null,
+        "consented": 470,
+        "randomized": 470,
+        "completed": 470,
+        "retained_at_primary_endpoint": null
+      },
+      "timeline": "Recruitment July 2005–Feb 2007"
+    },
+    "findings_and_implications": {
+      "key_findings": "Equity disclosures decrease willingness to participate and trust",
+      "patient_knowledge": "",
+      "patient_satisfaction": "",
+      "informed_consent_quality": "Negative comments and refusals more frequent with equity disclosures",
+      "impact_on_underrepresented_groups": "",
+      "cost_effectiveness": "",
+      "authors_conclusions": "Financial disclosures should be carefully considered to avoid deterring participation.",
+      "implications_for_future_research": "Test impact in real trials, refine consent content."
+    },
+    "tables_and_figures": [""],
+    "notes": "Vignette study, not a real trial. Sample mostly older, white men."
+  },
+  {
+    "study_metadata": {
+      "title": "Cost effectiveness of screening for clinical trials by research assistants versus senior investigators",
+      "authors": [
+        "Nina L. Miller", "John C. Markowitz", "James H. Kocsis", "Andrew C. Leon",
+        "Susan T. Brisco", "Jessica L. Garno"
+      ],
+      "year": 1998,
+      "journal": "Journal of Psychiatric Research",
+      "doi": "10.1016/S0022-3956(98)00045-4",
+      "disease_area_1": "Mental Health",
+      "disease_area_2": "Methodology",
+      "effect_direction": "positive",
+      "study_type": "Recruitment methodology",
+      "study_design": "Comparative study",
+      "geographical_location": ["United States"],
+      "ethical_approval": ""
+    },
+    "sample": {
+      "sample_size": 236,
+      "age": { "mean": 34.1, "range": [18, 71], "categories": [""] },
+      "sex": { "male": 79, "female": 157, "other": null },
+      "ethnicity": [""],
+      "SES": { "indicators": "", "categories": [""] },
+      "country_of_birth": [""],
+      "other_demographics": {
+        "marital_status": [""],
+        "education_level": [""],
+        "language": [""],
+        "employment_status": [""]
+      },
+      "inclusion_criteria": [
+        "Respondent to depression trial ad",
+        "Age 18–64",
+        "DSM-IV dysthymic disorder, double depression, or chronic major depression"
+      ],
+      "exclusion_criteria": [
+        "History of psychosis, mania, or hypomania",
+        "Comorbid substance abuse",
+        "Severe medical illness",
+        "Failed three antidepressant trials in past 3 years",
+        "Failed study medication or psychotherapy"
+      ]
+    },
+    "study_context": {
+      "setting": "Academic outpatient psychiatric clinic",
+      "recruitment_channels": ["Ads, radio, posters, word of mouth"],
+      "population_group": ["Adults with chronic depression"],
+      "country_income_level": "High"
+    },
+    "intervention_details": [
+      {
+        "name": "Screening by research assistant",
+        "description": "Telephone screening and referral for SCID interview",
+        "comparison_group": "Screening by senior investigator",
+        "timing_and_duration": "Initial phone interview"
+      }
+    ],
+    "outcomes": {
+      "primary": [
+        {
+          "name": "Positive predictive value",
+          "definition": "Proportion of phone screen positives who were SCID positive",
+          "result": "No significant difference by screener"
+        }
+      ],
+      "secondary": [
+        {
+          "name": "Screening cost per randomized subject",
+          "definition": "Calculated using screener wage and interview time",
+          "result": "RA 45% cheaper than SI"
+        }
+      ]
+    },
+    "recruitment_and_retention": {
+      "strategies": ["Phone screening by RAs or SIs"],
+      "summary": "RAs equally effective and more cost-efficient than SIs for phone screening.",
+      "recruitment_numbers": {
+        "screened": 236,
+        "eligible": null,
+        "consented": null,
+        "randomized": null,
+        "completed": null,
+        "retained_at_primary_endpoint": null
+      },
+      "timeline": "July 1995–August 1996"
+    },
+    "findings_and_implications": {
+      "key_findings": "No difference in predictive value, but RA screening is much cheaper",
+      "patient_knowledge": "",
+      "patient_satisfaction": "",
+      "informed_consent_quality": "",
+      "impact_on_underrepresented_groups": "",
+      "cost_effectiveness": "RAs are 45% more cost-effective for trial screening",
+      "authors_conclusions": "Trained non-clinician staff can optimize recruitment resources.",
+      "implications_for_future_research": "Replicate findings in other settings/patient groups."
+    },
+    "tables_and_figures": [""],
+    "notes": "First to examine cost/accuracy by screener type. Predominantly female sample."
+  },
+  {
+    "study_metadata": {
+      "title": "Evaluating the benefits of a patient information video during the informed consent process",
+      "authors": ["Julie Weston", "Mary Hannah", "Julia Downes"],
+      "year": 1997,
+      "journal": "Patient Education and Counseling",
+      "doi": "10.1016/S0738-3991(96)00968-8",
+      "disease_area_1": "Maternal/Child Health",
+      "disease_area_2": "Perinatal/Obstetrics",
+      "effect_direction": "positive",
+      "study_type": "Recruitment and informed consent intervention",
+      "study_design": "Randomized controlled trial (video vs written info)",
+      "geographical_location": ["Canada"],
+      "ethical_approval": "Women's College Hospital, Toronto, Ontario, Canada"
+    },
+    "sample": {
+      "sample_size": 90,
+      "age": { "median": 31.4, "range": [21.8, 39.5], "categories": [""] },
+      "sex": { "male": 0, "female": 90, "other": 0 },
+      "ethnicity": [""],
+      "SES": { "indicators": "Education level (high school or lower vs college or higher)", "categories": ["High school or lower", "College or higher"] },
+      "country_of_birth": [""],
+      "other_demographics": {
+        "marital_status": [""],
+        "education_level": ["High school or lower", "College or higher"],
+        "language": ["English-speaking (inclusion)"],
+        "employment_status": [""]
+      },
+      "inclusion_criteria": [
+        "English-speaking",
+        "19–33 weeks gestation (specifically 20–32 weeks for eligibility)",
+        "Attending antenatal care at participating clinics/hospitals"
+      ],
+      "exclusion_criteria": [
+        "Previous viewing of the Term PROM video"
+      ]
+    },
+    "study_context": {
+      "setting": "Recruitment for a perinatal trial (Term PROM Study) evaluating induction vs expectant management for prelabour rupture of membranes",
+      "recruitment_channels": ["Physicians’ offices", "Clinics"],
+      "population_group": ["Pregnant women (not eligible for actual trial, to avoid interference)"],
+      "country_income_level": "High"
+    },
+    "intervention_details": [
+      {
+        "name": "Patient information video",
+        "description": "A 10-minute professionally produced video describing the condition, study protocol, risks and benefits, participant and investigator testimonials, and invitation to participate.",
+        "comparison_group": "Written information only (standard consent materials)",
+        "timing_and_duration": "Single exposure during clinic/office visit, followed by questionnaire"
+      }
+    ],
+    "outcomes": {
+      "primary": [
+        {
+          "name": "Willingness for future participation",
+          "definition": "Proportion indicating they would participate in the Term PROM Study if eligible",
+          "result": "61.9% video group vs 35.4% control at initial assessment (p=0.01); 56.1% vs 38.6% at 2–4 weeks (not statistically significant)"
+        }
+      ],
+      "secondary": [
+        {
+          "name": "Knowledge retention",
+          "definition": "Number (%) correctly answering ≥9/11 content questions about PROM and the study",
+          "result": "No significant difference initially (95.2% vs 87.5%), but at 2–4 weeks, 87.8% video group vs 63.6% control (p=0.01)"
+        },
+        {
+          "name": "Perceived importance of the study",
+          "definition": "Rated on a 5-point scale; trend toward higher 'very important' in video group (not statistically significant, p=0.06)",
+          "result": ""
+        }
+      ]
+    },
+    "recruitment_and_retention": {
+      "strategies": ["Video information intervention", "Written information"],
+      "summary": "Video increased willingness to participate and improved information retention.",
+      "recruitment_numbers": {
+        "screened": 90,
+        "eligible": 90,
+        "consented": 90,
+        "randomized": 90,
+        "completed": 85,
+        "retained_at_primary_endpoint": 85
+      },
+      "timeline": "Enrolment June 28 to December 22, 1994; follow-up 2–4 weeks post-intervention"
+    },
+    "findings_and_implications": {
+      "key_findings": "Video information increased stated willingness to participate (significant at first assessment) and improved information retention at 2–4 weeks.",
+      "patient_knowledge": "Improved in video group, particularly at follow-up.",
+      "patient_satisfaction": "",
+      "informed_consent_quality": "Video improved comprehension and retention.",
+      "impact_on_underrepresented_groups": "Not specifically studied; sample was highly educated.",
+      "cost_effectiveness": "Video cost ~$22,000 CAD to produce.",
+      "authors_conclusions": "Showing a patient information video can increase willingness to participate in clinical trials and may improve understanding of study details.",
+      "implications_for_future_research": "Future research should test effects in real-eligible patients, with different backgrounds and at different consent time points."
+    },
+    "tables_and_figures": [
+      "Table 1: Baseline characteristics",
+      "Table 2: Willingness for future participation",
+      "Table 3: Knowledge retention",
+      "Table 4: Content questions analysis",
+      "Figure 1: Flow of participants"
+    ],
+    "notes": "No detailed breakdown of ethnicity. Majority highly educated. Used hypothetical participation, not actual trial eligibility."
+  },
+  {
+    "study_metadata": {
+      "title": "Do messages of scarcity increase trial recruitment?",
+      "authors": ["Caroline J. Free", "Elizabeth Hoile", "Rosemary Knight", "Steven Robertson", "Karen M. Devries"],
+      "year": 2011,
+      "journal": "Contemporary Clinical Trials",
+      "doi": "10.1016/j.cct.2010.09.002",
+      "disease_area_1": "Public Health",
+      "disease_area_2": "Addiction",
+      "effect_direction": "positive",
+      "study_type": "Recruitment intervention",
+      "study_design": "Single-blind randomized controlled trial",
+      "geographical_location": ["United Kingdom"],
+      "ethical_approval": "London School of Hygiene and Tropical Medicine Ethics Committee"
+    },
+    "sample": {
+      "sample_size": 1862,
+      "age": { "mean": 36, "range": [16, 79], "categories": [""] },
+      "sex": { "male": null, "female": null, "other": null },
+      "ethnicity": [""],
+      "SES": { "indicators": "", "categories": [""] },
+      "country_of_birth": [""],
+      "other_demographics": {
+        "marital_status": [""],
+        "education_level": [""],
+        "language": [""],
+        "employment_status": [""]
+      },
+      "inclusion_criteria": [
+        "Eligible for txt2stop trial",
+        "Texted interest to join",
+        "Not yet consented"
+      ],
+      "exclusion_criteria": [""]
+    },
+    "study_context": {
+      "setting": "Recruitment for a mobile-based smoking cessation trial",
+      "recruitment_channels": ["Radio", "Newspaper", "Internet", "GP surgeries", "Pharmacies", "Smoking cessation services"],
+      "population_group": ["Adults interested in quitting smoking"],
+      "country_income_level": "High"
+    },
+    "intervention_details": [
+      {
+        "name": "Scarcity message via SMS",
+        "description": "Text message stating there were only 300 places left in the trial, sent as reminder.",
+        "comparison_group": "Standard reminder message without scarcity wording",
+        "timing_and_duration": "Single SMS at recruitment follow-up"
+      }
+    ],
+    "outcomes": {
+      "primary": [
+        {
+          "name": "Consent rate within 3 days",
+          "definition": "Proportion of eligible individuals who texted consent to participate within 3 days",
+          "result": "10.1% in intervention group, 6.9% in control"
+        }
+      ],
+      "secondary": []
+    },
+    "recruitment_and_retention": {
+      "strategies": ["Scarcity framing via SMS"],
+      "summary": "Scarcity message increased consent rate compared to control",
+      "recruitment_numbers": {
+        "screened": 1862,
+        "eligible": 1862,
+        "consented": 157,
+        "randomized": 0,
+        "completed": 0,
+        "retained_at_primary_endpoint": 0
+      },
+      "timeline": "Recruitment messages sent June 1, 2009, outcome measured at 3 days"
+    },
+    "findings_and_implications": {
+      "key_findings": "Scarcity messages led to higher trial consent rates (OR 1.50, 95% CI 1.07–2.12)",
+      "patient_knowledge": "",
+      "patient_satisfaction": "",
+      "informed_consent_quality": "",
+      "impact_on_underrepresented_groups": "",
+      "cost_effectiveness": "",
+      "authors_conclusions": "Scarcity messaging is a simple, effective way to boost recruitment in clinical trials.",
+      "implications_for_future_research": "May be relevant to other recruitment-challenged trials."
+    },
+    "tables_and_figures": [""],
+    "notes": "No breakdown of sex, SES, or ethnicity reported."
+  },
+  {
+    "study_metadata": {
+      "title": "The impact of describing clinical trial treatments as new or standard",
+      "authors": [
+        "Cicely E.P. Kerr",
+        "Elizabeth J. Robinson",
+        "Richard J. Lilford",
+        "Sarah J.L. Edwards",
+        "David A. Braunholtz",
+        "Andrew J. Stevens"
+      ],
+      "year": 2004,
+      "journal": "Patient Education and Counseling",
+      "doi": "10.1016/S0738-3991(03)00124-1",
+      "disease_area_1": "Methodology",
+      "disease_area_2": "Research Participation",
+      "effect_direction": "neutral",
+      "study_type": "Experimental (survey with hypothetical clinical trial scenario)",
+      "study_design": "Randomized survey experiment",
+      "geographical_location": ["UK"],
+      "ethical_approval": "Keele Psychology Research Ethics Committee"
+    },
+    "sample": {
+      "sample_size": 130,
+      "age": { "mean": 30.9, "range": [18, 80], "categories": [""] },
+      "sex": { "male": null, "female": null, "other": null },
+      "ethnicity": [""],
+      "SES": { "indicators": "Occupation, education level", "categories": ["Manual/semi-skilled/unskilled", "Professional/managerial/skilled non-manual"] },
+      "country_of_birth": [""],
+      "other_demographics": {
+        "marital_status": [""],
+        "education_level": ["Mostly below degree-level"],
+        "language": [""],
+        "employment_status": [""]
+      },
+      "inclusion_criteria": [
+        "Adults (≥18 years) enrolled in further education and leisure courses in North Staffordshire"
+      ],
+      "exclusion_criteria": [
+        ""
+      ]
+    },
+    "study_context": {
+      "setting": "Survey using hypothetical randomized trial leaflets (back-pain or arthritis scenarios)",
+      "recruitment_channels": ["In-class recruitment at adult education colleges"],
+      "population_group": ["General public (adult learners, mostly female)"],
+      "country_income_level": "High"
+    },
+    "intervention_details": [
+      {
+        "name": "Description of treatments as new vs standard",
+        "description": "Participants were randomly given a leaflet describing two trial treatments for back-pain or arthritis as either both 'standard' or one 'new' and one 'standard'.",
+        "comparison_group": "Both treatments described as standard",
+        "timing_and_duration": "Single written scenario, immediate survey response"
+      }
+    ],
+    "outcomes": {
+      "primary": [
+        {
+          "name": "Treatment preference",
+          "definition": "Proportion expressing a preference for one trial treatment over the other",
+          "result": "Majority expressed no preference. In arthritis scenario, more people expressed a preference when one treatment was described as new (χ² = 5.44, p=0.031), but this was not specifically for the new treatment. In back-pain scenario, no significant difference."
+        }
+      ],
+      "secondary": [
+        {
+          "name": "Willingness to participate in RCT",
+          "definition": "Whether preference affected willingness to participate in a hypothetical randomized trial",
+          "result": "Participants with a preference for a treatment available outside the trial were less willing to participate (χ² = 23.3, p < 0.001). Preference for the new treatment was rare."
+        },
+        {
+          "name": "Interview themes",
+          "definition": "Qualitative interviews explored reasoning behind preferences",
+          "result": "Themes: (1) New/standard nature, (2) treatment similarity, (3) desperation, (4) condition severity, (5) information about treatments."
+        }
+      ]
+    },
+    "recruitment_and_retention": {
+      "strategies": ["Classroom survey with random assignment"],
+      "summary": "No evidence that merely labeling a treatment 'new' induces preference for it over a standard; preferences more complex and context dependent.",
+      "recruitment_numbers": {
+        "screened": 130,
+        "eligible": 130,
+        "consented": 130,
+        "randomized": 130,
+        "completed": 130,
+        "retained_at_primary_endpoint": 130
+      },
+      "timeline": "Data collected in a single session per participant; interviews immediately after survey"
+    },
+    "findings_and_implications": {
+      "key_findings": "Describing a trial treatment as 'new' did not create a general preference for it. When a difference appeared (arthritis scenario), the trend was for participants to prefer the standard treatment. Willingness to join an RCT reflected rational choices about treatment access.",
+      "patient_knowledge": "",
+      "patient_satisfaction": "",
+      "informed_consent_quality": "Preferences may be influenced by context and prior beliefs, not by labeling alone.",
+      "impact_on_underrepresented_groups": "Not specifically studied.",
+      "cost_effectiveness": "",
+      "authors_conclusions": "Labeling a treatment as new does not, by itself, drive preference. Preferences for new or standard may depend on context, condition severity, and other factors.",
+      "implications_for_future_research": "Design of trial materials should not assume that 'new' implies preference; further research should explore real-patient contexts and other variables influencing preferences."
+    },
+    "tables_and_figures": [
+      "Tables 1–5: Preference frequencies, scenario details, willingness by preference, qualitative coding"
+    ],
+    "notes": "Survey sample from adult education classes, mostly female, mean age ~31. No medical patients included."
+  },
+  {
+    "study_metadata": {
+      "title": "Recruitment of Hispanic women to the Women’s Health Initiative: the case of Embajadoras in Arizona",
+      "authors": [
+        "Linda K. Larkey",
+        "Lisa K. Staten",
+        "Cheryl Ritenbaugh",
+        "Renée A. Hall",
+        "David B. Buller",
+        "Tamsen Bassford",
+        "Barbara Rempfer Altimari"
+      ],
+      "year": 2002,
+      "journal": "Controlled Clinical Trials",
+      "doi": "10.1016/S0197-2456(02)00190-3",
+      "disease_area_1": "Women's Health",
+      "disease_area_2": "Multimorbidity",
+      "effect_direction": "positive",
+      "study_type": "Recruitment intervention",
+      "study_design": "Randomized controlled intervention (trained vs untrained lay advocates)",
+      "geographical_location": ["Arizona, USA"],
+      "ethical_approval": ""
+    },
+    "sample": {
+      "sample_size": 98,
+      "age": { "mean": null, "range": [50, 79], "categories": [""] },
+      "sex": { "male": 0, "female": 98, "other": 0 },
+      "ethnicity": ["Hispanic", "Anglo (non-Hispanic White)"],
+      "SES": { "indicators": "Not specified", "categories": [""] },
+      "country_of_birth": [""],
+      "other_demographics": {
+        "marital_status": [""],
+        "education_level": [""],
+        "language": ["English or Spanish"],
+        "employment_status": [""]
+      },
+      "inclusion_criteria": [
+        "Female",
+        "Aged 50–79 years",
+        "Current participant in the Women’s Health Initiative (WHI) trial in Arizona",
+        "Minimum number of social contacts (for advocate selection)",
+        "Positive attitude toward the study (for advocate selection)"
+      ],
+      "exclusion_criteria": [
+        "Not specified"
+      ]
+    },
+    "study_context": {
+      "setting": "Recruitment to the Women’s Health Initiative (WHI), a large multi-center prevention trial targeting postmenopausal women",
+      "recruitment_channels": ["Participant-to-participant advocacy", "Brochure distribution", "Community engagement"],
+      "population_group": ["Hispanic women", "Anglo (non-Hispanic White) women", "Postmenopausal women 50–79 years"],
+      "country_income_level": "High"
+    },
+    "intervention_details": [
+      {
+        "name": "Embajadoras (trained Hispanic lay advocates)",
+        "description": "Hispanic WHI participants received 6 hours of training on advocacy and communication, then met quarterly to encourage advocacy and were given brochures to distribute.",
+        "comparison_group": "Untrained Hispanic participants (received brochures only, no training); Untrained Anglo participants (received brochures only, no training)",
+        "timing_and_duration": "18 months; five quarterly meetings for trained group"
+      }
+    ],
+    "outcomes": {
+      "primary": [
+        {
+          "name": "Referral and enrollment success",
+          "definition": "Proportion of women in each group who referred or enrolled any new participant",
+          "result": "Embajadoras: 39.3% referred, 28.6% enrolled; Hispanic controls: 7.7% referred, 0% enrolled; Anglo controls: 23.8% referred, 4.8% enrolled. Embajadoras were 7.8 times more likely than Hispanic controls to refer (OR 7.76, 95% CI 1.52–39.62, p<0.01); enrollment difference p<0.001."
+        }
+      ],
+      "secondary": [
+        {
+          "name": "Brochure distribution",
+          "definition": "Mean number of brochures requested/distributed per participant",
+          "result": "Embajadoras distributed significantly more brochures than controls (mean 32.9 vs 19.2 vs 11.4, p<0.001)"
+        }
+      ]
+    },
+    "recruitment_and_retention": {
+      "strategies": ["Lay advocacy (trained and untrained)", "Culturally aligned training", "Brochure distribution"],
+      "summary": "Trained Hispanic lay advocates (Embajadoras) were more successful in recruiting and enrolling new Hispanic women than untrained Hispanic or Anglo women.",
+      "recruitment_numbers": {
+        "screened": null,
+        "eligible": null,
+        "consented": 98,
+        "randomized": 98,
+        "completed": null,
+        "retained_at_primary_endpoint": null
+      },
+      "timeline": "Intervention ran for 18 months with quarterly check-ins"
+    },
+    "findings_and_implications": {
+      "key_findings": "Culturally relevant, trained lay advocacy can boost recruitment and enrollment of Hispanic women to clinical trials. Simply providing brochures is less effective.",
+      "patient_knowledge": "",
+      "patient_satisfaction": "",
+      "informed_consent_quality": "",
+      "impact_on_underrepresented_groups": "Effective strategy for Hispanic (minority) recruitment; not directly tested in other minority groups.",
+      "cost_effectiveness": "Not directly evaluated; training required moderate resources.",
+      "authors_conclusions": "Lay advocacy with ongoing contact and support is effective for minority recruitment. More research is needed on factors influencing successful referral-to-enrollment conversion.",
+      "implications_for_future_research": "Future studies should test this approach in other populations and settings; should explore barriers in converting referrals to enrollments."
+    },
+    "tables_and_figures": [
+      "Table 1: Referral and enrollment activity",
+      "Table 2: Comparison of advocacy success among study groups"
+    ],
+    "notes": "Participants selected for social network size and positive attitudes; some small sample sizes; age range 50–79 years; all female."
+  },
+  {
+    "study_metadata": {
+      "title": "Presenting clinical trial information: a comparison of methods",
+      "authors": ["Hilary A. Llewellyn-Thomas", "Elaine C. Thiel", "Francis W.C. Sem", "Dianne E. Harrison Woermke"],
+      "year": 1995,
+      "journal": "Patient Education and Counseling",
+      "doi": "10.1016/0738-3991(94)00705-Q",
+      "disease_area_1": "Cancer",
+      "disease_area_2": "Methodology",
+      "effect_direction": "neutral",
+      "study_type": "Educational intervention (hypothetical trial)",
+      "study_design": "Randomized controlled trial (2-group design)"
+    },
+    "study_context": {
+      "objective": "To compare the effects of audio tape vs. interactive computer program on trial information understanding and entry intention.",
+      "study_design_and_setting": "Randomized study among radiation therapy patients at Sunnybrook Health Science Centre.",
+      "population_group": "Adult cancer patients receiving radiation therapy (excluding brain/eye tumors, leukemia, HIV-related Kaposi's sarcoma).",
+      "geographical_location": "Canada (Toronto, Ontario)",
+      "ethical_approval": "Not explicitly stated"
+    },
+    "population": {
+      "sample_size": 100,
+      "age_mean": 0,
+      "age_range": [18, 75],
+      "sex": {"male": 0, "female": 0},
+      "inclusion_criteria": [
+        "Receiving radiation therapy",
+        "Not in a current clinical trial",
+        "Fluent in English",
+        "In early stages of treatment"
+      ],
+      "exclusion_criteria": [
+        "Cognitive or physical incapacity",
+        "Past chemotherapy",
+        "Certain cancers (brain, HIV-related, blood disorders)"
+      ]
+    },
+    "demographic_standardised": {
+      "age": "18 to 75 years",
+      "sex_categories": ["Not reported"],
+      "SES_indicators": "Not reported",
+      "ethnicity": "Not reported"
+    },
+    "interventions": [
+      {
+        "name": "Interactive computer program",
+        "description": "Participants used a HyperCard-based program to navigate clinical trial information",
+        "details": "Allowed participant control of sequence and pace of learning"
+      },
+      {
+        "name": "Audio tape",
+        "description": "Participants listened to a standardized recorded explanation of a hypothetical trial",
+        "details": "No participant interaction possible"
+      }
+    ],
+    "comparison": "Audio tape vs. interactive computer teaching formats",
+    "outcomes": {
+      "primary": ["Understanding of trial information"],
+      "secondary": ["Satisfaction with method", "Willingness to join trial"]
+    },
+    "recruitment_and_retention_strategies": {
+      "evaluated_strategy": "Comparison of teaching formats",
+      "effectiveness_summary": "Computer group showed more positive attitude toward trial entry; no difference in understanding or satisfaction",
+      "general_recruitment_challenges_and_context": "Addressed low comprehension and decision-making capacity in trial consent"
+    },
+    "findings": {
+      "patient_accrual": "100 patients enrolled (60% of those eligible agreed)",
+      "patient_knowledge": "No significant difference in understanding between groups",
+      "patient_satisfaction": "No significant difference in satisfaction",
+      "informed_consent_quality": "Some refusers had high understanding but still declined",
+      "underrepresented_group_impact": "Women were more likely to refuse",
+      "cost_effectiveness": "Not evaluated",
+      "conclusion": "Interactive formats may increase trial acceptability; understanding is not format-dependent",
+      "implication_for_future_research": "Future studies should include actual trial decisions and account for respondent sex"
+    },
+    "recruitment_findings": {
+      "recruitment_method": "Approached during clinic visits",
+      "screened_positive": 169,
+      "attended_SCID": 0,
+      "SCID_positive": 0,
+      "randomized": 100
+    },
+    "tables_extracted": [],
+    "notes": "Focus on hypothetical trial entry; more research needed for real clinical settings. Baseline trust and demographics not fully reported."
+  },
+  {
+    "study_metadata": {
+      "title": "Blinding decreased recruitment in a prevention trial of postmenopausal hormone therapy",
+      "authors": [
+        "Elina Hemminki",
+        "Sirpa-Liisa Hovi",
+        "Piret Veerus",
+        "Tiina Sevón",
+        "Risto Tuimala",
+        "Mati Rahu",
+        "Matti Hakama"
+      ],
+      "year": 2004,
+      "journal": "Journal of Clinical Epidemiology",
+      "doi": "10.1016/j.jclinepi.2004.04.009",
+      "disease_area_1": "Women's Health",
+      "disease_area_2": "Methodology",
+      "effect_direction": "negative",
+      "study_type": "Recruitment intervention (design feature comparison)",
+      "study_design": "Randomized comparison (blind vs nonblind group allocation)",
+      "geographical_location": ["Estonia"],
+      "ethical_approval": "Committee of Medical Ethics, Tallinn, Estonia; University of Tampere, Finland"
+    },
+    "sample": {
+      "sample_size": 4295,
+      "age": { "mean": null, "range": [50, 64], "categories": [""] },
+      "sex": { "male": 0, "female": 4295, "other": 0 },
+      "ethnicity": [""],
+      "SES": { "indicators": "", "categories": [""] },
+      "country_of_birth": ["Estonia"],
+      "other_demographics": {
+        "marital_status": [""],
+        "education_level": [""],
+        "language": ["Estonian"],
+        "employment_status": [""]
+      },
+      "inclusion_criteria": [
+        "Women aged 50–64",
+        "Estonian-speaking",
+        "Eligible and interested (from screening survey)"
+      ],
+      "exclusion_criteria": [
+        "Current or previous breast or uterine cancer",
+        "Other cancer <5 years",
+        "History of DVT, PE, stroke, meningioma, porphyria, endometriosis, recent MI or hepatitis",
+        "Untreated hypertension",
+        "Irregular postmenopausal bleeding",
+        "Abnormal PAP-screen",
+        "Menstrual bleeding within last 12 months",
+        "Desire for PHT or plans to move"
+      ]
+    },
+    "study_context": {
+      "setting": "Primary prevention trial for postmenopausal hormone therapy in Estonia",
+      "recruitment_channels": ["Postal questionnaire and information leaflet sent to general population"],
+      "population_group": ["Postmenopausal women, community-dwelling, aged 50–64"],
+      "country_income_level": "High (transition economy in late 1990s/early 2000s)"
+    },
+    "intervention_details": [
+      {
+        "name": "Randomization to blind (placebo-controlled) vs nonblind (open-label) group",
+        "description": "Eligible women were randomized to receive invitation for a blind (PHT vs placebo) or nonblind (PHT vs no treatment) trial group. Study and recruitment procedures identical except for blinding.",
+        "comparison_group": "Blind (placebo) design vs nonblind (open-label) design",
+        "timing_and_duration": "Recruitment and follow-up from 1998–2001"
+      }
+    ],
+    "outcomes": {
+      "primary": [
+        {
+          "name": "Recruitment rate",
+          "definition": "Percentage of eligible and interested women enrolled after receiving group-specific invitation",
+          "result": "37% recruited in blind group (95% CI 35–39%) vs 48% in nonblind group (95% CI 46–49%)—a 30% higher recruitment rate in the nonblind group; absolute difference 10.3% (95% CI 7.4–13.2%, p<0.001)"
+        }
+      ],
+      "secondary": [
+        {
+          "name": "Attrition at different recruitment stages",
+          "definition": "Percent lost at various steps (did not attend clinical exam, ineligible, lost interest)",
+          "result": "Most loss was failure to attend initial clinical exam (49% blind, 40% nonblind); remaining losses due to ineligibility or lost interest."
+        },
+        {
+          "name": "Reasons for joining",
+          "definition": "Self-reported reasons for participating, via 1-year follow-up survey",
+          "result": "Similar in both groups: main reasons were free medical exam, desire to help research, help for menopause; few cited free drugs."
+        }
+      ]
+    },
+    "recruitment_and_retention": {
+      "strategies": [
+        "Blinded vs nonblinded allocation in invitation materials",
+        "Personalized invitation, follow-up by phone and letter, in-person clinical exam"
+      ],
+      "summary": "Blinding (use of placebo group) decreased recruitment compared to nonblind, open-label design.",
+      "recruitment_numbers": {
+        "screened": 39713,
+        "eligible": 4295,
+        "consented": 1823,
+        "randomized": 4295,
+        "completed": null,
+        "retained_at_primary_endpoint": null
+      },
+      "timeline": "Recruitment 1998–2001; 1-year follow-up data on reasons for joining"
+    },
+    "findings_and_implications": {
+      "key_findings": "Nonblinded design increased recruitment by ~30% compared to a blinded (placebo-controlled) design in a long-term prevention trial.",
+      "patient_knowledge": "",
+      "patient_satisfaction": "",
+      "informed_consent_quality": "No major difference in satisfaction with information provided.",
+      "impact_on_underrepresented_groups": "",
+      "cost_effectiveness": "",
+      "authors_conclusions": "Allowing participants to know their treatment arm (nonblind) may substantially improve recruitment in preventive trials.",
+      "implications_for_future_research": "Blinding may hinder recruitment in long-term prevention trials. Future studies should examine generalizability and trade-offs between bias reduction and feasibility."
+    },
+    "tables_and_figures": [
+      "Figure 1: Recruitment flow diagram",
+      "Table 1: Recruitment rates by group",
+      "Table 2: Reasons for joining trial",
+      "Table 3: Preferences for treatment arm"
+    ],
+    "notes": "Population-based approach; substantial attrition at each stage; trial context was postmenopausal hormone therapy, a preventive intervention."
+  },
+
+  {
+    "study_metadata": {
+      "title": "Publicity does not increase recruitment to falls prevention trials: the results of two quasi-randomized trials",
+      "authors": ["Alison Pighills", "David J. Torgerson", "Trevor Sheldon"],
+      "year": 2009,
+      "journal": "Journal of Clinical Epidemiology",
+      "doi": "10.1016/j.jclinepi.2009.01.017",
+      "disease_area_1": "Geriatrics",
+      "disease_area_2": "Injury Prevention",
+      "effect_direction": "neutral",
+      "study_type": "Recruitment intervention",
+      "study_design": "Two quasi-randomized trials (alternate allocation)",
+      "geographical_location": ["United Kingdom (Yorkshire)"],
+      "ethical_approval": ""
+    },
+    "sample": {
+      "sample_size": 7233,
+      "age": { "mean": null, "range": ["70+", null], "categories": [""] },
+      "sex": { "male": null, "female": null, "other": null },
+      "ethnicity": [""],
+      "SES": { "indicators": "", "categories": [""] },
+      "country_of_birth": [""],
+      "other_demographics": {
+        "marital_status": [""],
+        "education_level": [""],
+        "language": [""],
+        "employment_status": [""]
+      },
+      "inclusion_criteria": [
+        "Aged 70 or older",
+        "Registered with participating general practitioner in North and West Yorkshire",
+        "At least one fall in the previous 12 months"
+      ],
+      "exclusion_criteria": [""]
+    },
+    "study_context": {
+      "setting": "Primary care recruitment for falls prevention randomized trial",
+      "recruitment_channels": ["Postal recruitment packs sent via GP practices"],
+      "population_group": ["Older adults, community-dwelling"],
+      "country_income_level": "High"
+    },
+    "intervention_details": [
+      {
+        "name": "Publicity via newspaper article in recruitment pack",
+        "description": "Participants received a photocopied local newspaper article about the trial with their standard study invitation materials. In study 2, a more 'upbeat' article was tested.",
+        "comparison_group": "Standard recruitment pack (no publicity article)",
+        "timing_and_duration": "Single inclusion in initial recruitment pack"
+      }
+    ],
+    "outcomes": {
+      "primary": [
+        {
+          "name": "Recruitment rate",
+          "definition": "Percentage of recipients recruited to the main trial",
+          "result": "Study 1: 3.25% publicity vs 3.16% control (no significant difference, p=0.80); Study 2: 4.15% upbeat publicity vs 3.94% standard publicity (no significant difference, p=0.75)"
+        }
+      ],
+      "secondary": [
+        {
+          "name": "Response rate",
+          "definition": "Percentage of recipients who responded (agreed to participate or not)",
+          "result": "Study 1: 4.55% publicity vs 4.32% control; Study 2: 5.46% upbeat vs 5.03% standard; neither difference statistically significant"
+        }
+      ]
+    },
+    "recruitment_and_retention": {
+      "strategies": ["Inclusion of media publicity articles in recruitment materials"],
+      "summary": "No evidence that publicity via newspaper articles improved recruitment or response rates.",
+      "recruitment_numbers": {
+        "screened": 7233,
+        "eligible": null,
+        "consented": 177,
+        "randomized": 130,
+        "completed": null,
+        "retained_at_primary_endpoint": null
+      },
+      "timeline": "Study 1: 4,488 packs sent; Study 2: 2,745 packs sent after first wave; each analyzed after initial mailing."
+    },
+    "findings_and_implications": {
+      "key_findings": "Including newspaper articles in recruitment packs had no significant effect on recruitment or response rates in two large trials.",
+      "patient_knowledge": "",
+      "patient_satisfaction": "",
+      "informed_consent_quality": "",
+      "impact_on_underrepresented_groups": "",
+      "cost_effectiveness": "Publicity is inexpensive but did not improve yield.",
+      "authors_conclusions": "Simple media publicity is unlikely to enhance recruitment for clinical trials among older adults.",
+      "implications_for_future_research": "Researchers should evaluate other strategies; future work could target different populations or settings."
+    },
+    "tables_and_figures": [
+      "Figure 1: Flowchart of responses and recruitment (study 1)",
+      "Figure 2: Flowchart of responses and recruitment (study 2)"
+    ],
+    "notes": "Large sample size; allocation via alternation (quasi-randomized); possible contamination if some control participants saw newspaper articles independently."
+  },
+
+  {
+    "study_metadata": {
+      "title": "Telephone reminders are effective in recruiting nonresponding patients to randomized controlled trials",
+      "authors": ["Pål Nystuen", "Kåre B. Hagen"],
+      "year": 2004,
+      "journal": "Journal of Clinical Epidemiology",
+      "doi": "10.1016/j.jclinepi.2003.12.015",
+      "disease_area_1": "Occupational Health",
+      "disease_area_2": "Mental Health",
+      "disease_area_3": "Musculoskeletal",
+      "effect_direction": "positive",
+      "study_type": "Recruitment intervention",
+      "study_design": "Randomized controlled trial",
+      "geographical_location": ["Norway (Oslo)"],
+      "ethical_approval": "Regional Medical Ethics Committee"
+    },
+    "sample": {
+      "sample_size": 703,
+      "age": { "mean": 41.3, "range": [16, 66], "categories": [""] },
+      "sex": { "male": null, "female": null, "other": null },
+      "ethnicity": [""],
+      "SES": { "indicators": "", "categories": [""] },
+      "country_of_birth": [""],
+      "other_demographics": {
+        "marital_status": [""],
+        "education_level": [""],
+        "language": ["Norwegian"],
+        "employment_status": [""]
+      },
+      "inclusion_criteria": [
+        "Employees aged 16–66 years",
+        "Sick-listed for more than 7 weeks",
+        "Diagnosis of nonsevere psychological problems or musculoskeletal pain"
+      ],
+      "exclusion_criteria": [
+        "Severe psychological problems",
+        "Some musculoskeletal diagnoses",
+        "Self-employment",
+        "Pregnancy",
+        "Graded sick leave <50%",
+        "Awaiting elective orthopedic surgery",
+        "Need for interpreter"
+      ]
+    },
+    "study_context": {
+      "setting": "Recruitment for a randomized trial comparing standard care vs solution-focused follow-up among long-term sick-listed employees",
+      "recruitment_channels": ["Written invitation letters (postal)", "Telephone reminders"],
+      "population_group": ["Sick-listed employees, general adult working-age population"],
+      "country_income_level": "High"
+    },
+    "intervention_details": [
+      {
+        "name": "Telephone reminder to nonresponders",
+        "description": "Nonresponders to an initial invitation letter were randomly assigned to receive either an attempted telephone reminder or no further contact.",
+        "comparison_group": "No telephone reminder (usual practice)",
+        "timing_and_duration": "Telephone contact attempted 2–3 weeks after initial letter; up to 3–4 attempts at different times of day"
+      }
+    ],
+    "outcomes": {
+      "primary": [
+        {
+          "name": "Recruitment rate among nonresponders (intention to phone analysis)",
+          "definition": "Percentage of nonresponders subsequently recruited after intervention",
+          "result": "12.1% recruited with telephone reminder vs 4.5% with no reminder (p=0.003; OR 2.89, 95% CI 1.42–5.90)"
+        }
+      ],
+      "secondary": [
+        {
+          "name": "Overall recruitment rate (intention to recruit analysis)",
+          "definition": "Total percentage recruited among all initially invited",
+          "result": "15.4% (telephone group) vs 12.1% (control); not statistically significant (p=0.229)"
+        },
+        {
+          "name": "Number needed to phone",
+          "definition": "How many nonresponders must be phoned to recruit one additional participant",
+          "result": "13 (95% CI 8–33)"
+        }
+      ]
+    },
+    "recruitment_and_retention": {
+      "strategies": ["Written invitation with reply coupon", "Telephone reminders for nonresponders"],
+      "summary": "Systematic telephone follow-up increased recruitment among nonresponders.",
+      "recruitment_numbers": {
+        "screened": 703,
+        "eligible": 703,
+        "consented": 97,
+        "randomized": 703,
+        "completed": null,
+        "retained_at_primary_endpoint": null
+      },
+      "timeline": "Letters sent from Feb 2002 to Feb 2003; phone calls made 2–3 weeks after letter"
+    },
+    "findings_and_implications": {
+      "key_findings": "Telephone reminders significantly increased recruitment among nonresponders in an RCT.",
+      "patient_knowledge": "",
+      "patient_satisfaction": "",
+      "informed_consent_quality": "",
+      "impact_on_underrepresented_groups": "",
+      "cost_effectiveness": "Phoning is resource-intensive but more efficient than expanding recruitment sites.",
+      "authors_conclusions": "Whenever feasible, systematic telephone reminders should be considered to increase uptake in RCTs.",
+      "implications_for_future_research": "Future work should assess cost-effectiveness and standardize phone call approaches; consider after-hours calling."
+    },
+    "tables_and_figures": [
+      "Table 1: Participant characteristics",
+      "Table 2: Characteristics of nonresponders",
+      "Table 3: Recruitment to RCT (all participants)",
+      "Table 4: Recruitment among nonresponders",
+      "Figure 1: Trial profile"
+    ],
+    "notes": "Randomization occurred at initial letter stage; some baseline differences existed between intervention/control in nonresponder group. No postal reminders used."
+  }
+]
