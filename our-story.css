@@ -34,8 +34,11 @@
 
 .founder-content {
     display: flex;
-    gap: 2.5rem;
+    gap: 1.5rem;
     align-items: flex-start;
+    padding: 0 2rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .founder-image-container {
@@ -90,12 +93,12 @@
 .founder-description {
     flex: 1;
     font-family: 'Segoe UI', sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.7;
+    font-size: 1.1rem;
+    line-height: 1.5;
     color: var(--white);
     margin: 0;
-    padding-top: 0.5rem;
-    max-width: 650px;
+    padding-top: 0.25rem;
+    max-width: 450px;
 }
 
 /* CTA Section */
@@ -190,10 +193,10 @@
 
 .feature-card {
     background: var(--white);
-    padding: 1.5rem;
-    border-radius: 1rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
     text-align: center;
-    border: 1px solid rgba(74, 3, 116, 0.1);
+    border: 2px solid var(--yellow);
 }
 
 .feature-card h3 {

@@ -1,0 +1,270 @@
+:root {
+    --purple: #4A0374;
+    --yellow: #F9A620;
+    --white: #F4F4F9;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--purple);
+    color: var(--white);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header Section */
+.insights-header {
+    padding: 4rem 4rem 2rem;
+    text-align: center;
+}
+
+.insights-header h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.8rem;
+    margin: 0 0 2rem;
+    color: var(--white);
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.insight-card {
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    aspect-ratio: 1;
+    text-decoration: none;
+    background: var(--purple);
+}
+
+.insight-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    mix-blend-mode: soft-light;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+}
+
+.card-content h2 {
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+/* Case of the Week Section */
+.case-of-week {
+    padding: 3rem 4rem;
+    background-color: var(--white);
+    color: var(--purple);
+    text-align: center;
+}
+
+.case-of-week h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    margin: 0 0 2rem;
+}
+
+.highlight {
+    color: var(--yellow);
+}
+
+.case-content {
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.case-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(74, 3, 116, 0.1);
+}
+
+.case-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.case-item h3 {
+    color: var(--purple);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem;
+}
+
+.case-item .authors {
+    color: var(--purple);
+    font-size: 0.9rem;
+    margin: 0 0 0.75rem;
+    opacity: 0.8;
+}
+
+.case-item .summary {
+    color: var(--purple);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.feature-text {
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature-text p {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+}
+
+.feature-link {
+    color: var(--purple);
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Match Study Section */
+.match-study {
+    padding: 3rem 4rem 2rem;
+    text-align: center;
+    background-color: var(--purple);
+}
+
+.match-study h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.match-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--yellow);
+    color: var(--purple);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.match-study p {
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Recent Blogs Section */
+.recent-blogs {
+    padding: 2rem 4rem 4rem;
+    background-color: var(--purple);
+}
+
+.recent-blogs h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    margin: 0 0 2rem;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.blog-card {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    background: var(--white);
+    border: 2px solid var(--yellow);
+}
+
+.blog-image {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-content h3 {
+    color: var(--purple);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem;
+}
+
+.blog-content p {
+    color: var(--purple);
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Contact Buttons */
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 4rem 4rem;
+}
+
+.contact-btn {
+    padding: 0.8rem 2rem;
+    background-color: var(--yellow);
+    color: var(--purple);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+@media (max-width: 992px) {
+
+    .insights-header,
+    .case-of-week,
+    .match-study,
+    .recent-blogs,
+    .contact-buttons {
+        padding: 2rem;
+    }
+
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .insights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
