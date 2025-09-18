@@ -10,6 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="recommendations.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <!-- Firebase Config -->
+    <script src="firebase-config.js"></script>
 </head>
 
 <body>
@@ -24,8 +30,8 @@
                 <div class="nav-links">
                     <a href="dashboard.html">Dashboard</a>
                     <a href="our-story.html">About Us</a>
-                    <a href="#">Pricing</a>
-                    <a href="#" class="user-profile">My Account</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="dashboard.html" class="user-profile">My Account</a>
                 </div>
             </div>
         </nav>
@@ -34,9 +40,20 @@
             <div class="header-section">
                 <div class="recommendations-container">
                     <h1>Your Strategy Stack.</h1>
-                    <button class="back-button" onclick="window.location.href='create-study.html'">
-                        Go back to edit study information
-                    </button>
+                    <div class="header-actions">
+                        <button class="back-button" onclick="window.location.href='create-study.html'">
+                            Go back to edit study information
+                        </button>
+                        <div class="button-group">
+                            <button class="save-project-btn" id="saveProjectBtn">
+                                Save Project
+                            </button>
+                            <button class="my-studies-btn" id="myStudiesBtn" style="display: none;"
+                                onclick="window.location.href='my-studies.html'">
+                                My Studies
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -93,6 +110,30 @@
                 </div>
             </div>
         </main>
+    </div>
+
+    <!-- Save Project Modal -->
+    <div id="saveProjectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Save Your Project</h2>
+            <form id="saveProjectForm">
+                <div class="form-group">
+                    <label for="projectName">Project Name</label>
+                    <input type="text" id="projectName" name="projectName" placeholder="Enter a name for your project"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="projectDescription">Description (optional)</label>
+                    <textarea id="projectDescription" name="projectDescription"
+                        placeholder="Add a brief description"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn">Cancel</button>
+                    <button type="submit" class="save-btn">Save Project</button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <script src="recommendations.js"></script>

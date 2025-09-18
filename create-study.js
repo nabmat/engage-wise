@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('studyForm');
     const generateBtn = form.querySelector('.generate-btn');
 
-    // Function to check if all required fields are filled
     function checkFormValidity() {
         const requiredFields = form.querySelectorAll('[required]');
         let isValid = true;
@@ -17,40 +16,65 @@ document.addEventListener('DOMContentLoaded', function () {
         generateBtn.style.opacity = isValid ? '1' : '0.5';
     }
 
-    // Add event listeners to all form fields
     const formFields = form.querySelectorAll('input, select');
     formFields.forEach(field => {
         field.addEventListener('input', checkFormValidity);
         field.addEventListener('change', checkFormValidity);
     });
 
-    // Handle form submission
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        // Collect form data
         const formData = {
             studyTitle: form.studyTitle.value,
             diseaseArea: form.diseaseArea.value,
             gender: form.gender.value,
             ageGroup: form.ageGroup.value,
-            studySetting: form.studySetting.value
+            studySetting: form.studySetting.value,
+            timestamp: new Date().toISOString()
         };
 
-        // Store form data in session storage
         sessionStorage.setItem('studyFormData', JSON.stringify(formData));
-        console.log('Form data saved:', formData); // Debug log
 
-        // Redirect to recommendations page
+        trackStudyInput(formData);
+
         window.location.href = 'recommendations.html';
     });
 
-    // Initial check
+    function trackStudyInput(data) {
+        try {
+            const existingData = localStorage.getItem('studyAnalytics') || '[]';
+            const analyticsData = JSON.parse(existingData);
+            analyticsData.push(data);
+            localStorage.setItem('studyAnalytics', JSON.stringify(analyticsData));
+
+            if (typeof firebase !== 'undefined' && firebase.firestore) {
+                firebase.firestore().collection('studyAnalytics')
+                    .add({
+                        ...data,
+                        userAgent: navigator.userAgent,
+                        screenSize: `${window.innerWidth}x${window.innerHeight}`,
+                        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                    })
+                    .catch(error => {
+                        console.error("Error storing analytics: ", error);
+                    });
+            }
+        } catch (error) {
+            console.error("Error tracking study input: ", error);
+        }
+    }
+
     checkFormValidity();
 
-    // Debug: Check if there's existing data
     const existingData = sessionStorage.getItem('studyFormData');
     if (existingData) {
-        console.log('Existing form data:', JSON.parse(existingData));
+        const parsedData = JSON.parse(existingData);
+        Object.keys(parsedData).forEach(key => {
+            if (form[key]) {
+                form[key].value = parsedData[key];
+            }
+        });
+        checkFormValidity();
     }
-}); 
+});

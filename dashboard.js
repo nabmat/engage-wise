@@ -50,12 +50,11 @@ document.getElementById('logoutBtn').addEventListener('click', async (e) => {
 
 // Handle button clicks
 document.querySelector('.create-study-btn').addEventListener('click', () => {
-    window.location.href = '/create-study.html';
+    window.location.href = 'create-study.html';
 });
 
 document.querySelector('.my-studies-btn').addEventListener('click', () => {
-    // Add your studies page logic here
-    alert('My Studies feature coming soon!');
+    window.location.href = 'my-studies.html';
 });
 
 document.querySelector('.watch-tutorial-btn').addEventListener('click', () => {

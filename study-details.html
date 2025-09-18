@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EngageWise - Dashboard</title>
+    <title>Study Details - EngageWise</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="recommendations.css">
+    <link rel="stylesheet" href="study-details.css">
     <link rel="stylesheet" href="footer.css">
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
@@ -19,7 +20,7 @@
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
     <!-- Firebase Config -->
     <script src="firebase-config.js"></script>
-    <script src="dashboard.js" defer></script>
+    <script src="study-details.js" defer></script>
 </head>
 
 <body>
@@ -32,11 +33,12 @@
                     </a>
                 </div>
                 <div class="nav-links">
-                    <a href="#" class="active">Dashboard</a>
+                    <a href="dashboard.html">Dashboard</a>
                     <a href="about-engage.html">About</a>
                     <a href="pricing.html">Pricing</a>
                     <div class="user-menu">
-                        <button class="user-profile" id="userProfileBtn">
+                        <button class="user-profile" id="userProfileBtn"
+                            onclick="window.location.href='dashboard.html'">
                             <span id="userDisplayName">Loading...</span>
                             <span class="dropdown-arrow">▼</span>
                         </button>
@@ -52,45 +54,45 @@
             </div>
         </nav>
 
-        <main class="dashboard">
-            <div class="dashboard-content">
-                <h1>Welcome to Your Dashboard</h1>
-                <p class="welcome-message">Welcome back, <span id="welcomeName">there</span>!</p>
-
-                <div class="process-steps">
-                    <div class="step">
-                        <div class="step-icon">🎯</div>
-                        <h3>1. Design Study</h3>
-                        <p>Create and customize your research parameters</p>
+        <main>
+            <div class="header-section">
+                <div class="recommendations-container">
+                    <div class="header-actions">
+                        <button class="back-button" onclick="window.location.href='my-studies.html'">
+                            Back to My Studies
+                        </button>
+                        <h1 id="studyTitle">Study Details</h1>
+                        <div class="header-buttons">
+                            <button class="edit-btn" id="editStudyBtn">Edit</button>
+                            <button class="delete-btn" id="deleteStudyBtn">Delete</button>
+                        </div>
                     </div>
-                    <div class="step">
-                        <div class="step-icon">👥</div>
-                        <h3>2. Recruit Participants</h3>
-                        <p>Find the right participants for your research</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-icon">📊</div>
-                        <h3>3. Analyze Results</h3>
-                        <p>Get insights from comprehensive analytics</p>
-                    </div>
+                    <p id="studyDescription" class="study-description"></p>
                 </div>
+            </div>
 
-                <div class="action-buttons">
-                    <button class="create-study-btn">
-                        <span>+</span> Create New Study
-                    </button>
-                    <button class="my-studies-btn">My Studies</button>
-                    <button class="watch-tutorial-btn">
-                        <span>▶</span> Watch Tutorial
-                    </button>
+            <div class="cards-section">
+                <div class="recommendations-container">
+                    <div class="direction-label">Direction of effect</div>
+                    <div class="strategy-cards" id="strategyCards">
+                        <!-- Strategy cards will be dynamically populated by JavaScript -->
+                        <div class="loading-message">Loading recommendations...</div>
+                    </div>
                 </div>
             </div>
         </main>
 
-        <div class="background-dots">
-            <div class="dot dot-1"></div>
-            <div class="dot dot-2"></div>
-            <div class="dot dot-3"></div>
+        <!-- Delete Confirmation Modal -->
+        <div id="deleteModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Delete Study</h2>
+                <p>Are you sure you want to delete this study? This action cannot be undone.</p>
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn">Cancel</button>
+                    <button type="button" class="delete-btn" id="confirmDeleteBtn">Delete</button>
+                </div>
+            </div>
         </div>
     </div>
 

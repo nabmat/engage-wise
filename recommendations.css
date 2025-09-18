@@ -30,6 +30,14 @@ h1 {
     margin-bottom: 2rem;
 }
 
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
 .back-button {
     background: none;
     border: none;
@@ -38,7 +46,31 @@ h1 {
     cursor: pointer;
     font-size: 0.9rem;
     padding: 0;
-    margin-bottom: 2rem;
+}
+
+.save-project-btn,
+.my-studies-btn {
+    background-color: var(--yellow);
+    color: var(--purple);
+    border: none;
+    border-radius: 5px;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: 10px;
+}
+
+.save-project-btn:hover,
+.my-studies-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
 }
 
 .direction-label {
@@ -65,6 +97,11 @@ h1 {
 }
 
 .strategy-card {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.strategy-card-main {
     background: var(--white);
     border-radius: 15px;
     padding: 0;
@@ -157,35 +194,13 @@ h1 {
 
 /* Expanded view layout */
 .expanded-content {
-    border-top: 1px solid #e9ecef;
-    border-radius: 0 0 15px 15px;
-}
-
-.expanded-layout {
-    display: flex;
-    min-height: 280px;
-}
-
-.expanded-left {
-    flex: 0 0 220px;
-    padding: 1.25rem;
-    background: #fff;
-    border-right: 1px solid #e9ecef;
+    padding: 1rem 1.5rem 1.5rem;
+    border-radius: 10px;
     position: relative;
-}
-
-.expanded-left h4 {
-    color: var(--purple);
-    font-size: 1rem;
-    margin: 0 0 0.75rem 0;
-    font-weight: 600;
-}
-
-.expanded-left p {
-    color: var(--purple);
-    font-size: 0.85rem;
-    margin: 0;
-    opacity: .8;
+    background: #f8f9fa;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .minimize-button {
@@ -198,16 +213,11 @@ h1 {
     font-size: 1.4rem;
     cursor: pointer;
     opacity: .6;
+    z-index: 2;
 }
 
 .minimize-button:hover {
     opacity: 1;
-}
-
-.expanded-middle {
-    flex: 1;
-    padding: 1.25rem;
-    background: #f8f9fa;
 }
 
 .expanded-right {
@@ -223,8 +233,22 @@ h1 {
 
 .study-details {
     color: var(--purple);
-    font-size: .95rem;
-    line-height: 1.5;
+    font-size: .85rem;
+    line-height: 1.4;
+    padding-top: 0.5rem;
+}
+
+.study-details p {
+    margin: 0 0 0.75rem 0;
+}
+
+.study-details p:last-child {
+    margin-bottom: 0;
+}
+
+.study-details strong {
+    font-weight: 600;
+    color: var(--purple);
 }
 
 .strategy-card.expanded {
@@ -406,6 +430,180 @@ h1 {
     }
 }
 
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #aaa;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: var(--purple);
+}
+
+.modal h2 {
+    color: var(--purple);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--purple);
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cancel-btn {
+    background: none;
+    border: 1px solid #ddd;
+    color: #666;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.save-btn {
+    background-color: var(--purple);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.save-btn:hover {
+    background-color: #4a2a82;
+}
+
+.success-message {
+    background-color: #28a745;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 600;
+    animation: fadeIn 0.3s;
+}
+
+.success-message .sync-note {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+
+.saving-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    animation: fadeIn 0.3s;
+}
+
+.saving-indicator p {
+    margin: 0.5rem 0 0 0;
+    color: var(--purple);
+}
+
+.spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-top-color: var(--purple);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 @media (max-width: 768px) {
     .strategy-card {
         flex-direction: column;
@@ -433,5 +631,17 @@ h1 {
     .strategy-text {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
+    }
+
+    .header-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .modal-content {
+        margin: 20% auto;
+        padding: 1.5rem;
+        width: 95%;
     }
 }

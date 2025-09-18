@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
+    <title>Study Readiness Quiz - EngageWise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-header {
+            background-color: var(--purple);
+            padding: 15px 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0
+        }
+
+        .logo img {
+            height: 200px;
+            width: auto;
+            margin: -50px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .contact-btn {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 24px;
+            border: 2px solid white;
+            border-radius: 100px;
+        }
+
+        .contact-btn:hover {
+            background-color: white;
+            color: var(--purple);
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .footer {
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .main-header {
+                padding: 15px 20px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .logo img {
+                height: 120px;
+                margin: -25px 0;
+            }
+
+            .nav-links {
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .quiz-container {
+                padding: 0 15px;
+                margin: 20px auto;
+            }
+
+            .quiz-card {
+                padding: 20px;
+            }
+
+            .question-text {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo img {
+                height: 100px;
+                margin: -20px 0;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .contact-btn {
+                padding: 6px 18px;
+            }
+
+            .quiz-card {
+                padding: 15px;
+            }
+
+            .email-input,
+            .send-report-btn,
+            .strategy-session-btn {
+                padding: 10px;
+            }
+        }
+
+        .quiz-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .quiz-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: var(--purple);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .question-number {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .question-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .option input[type="radio"] {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .option input[type="radio"]:checked {
+            border-color: var(--purple);
+        }
+
+        .option input[type="radio"]:checked::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            background-color: var(--purple);
+            border-radius: 50%;
+        }
+
+        .option label {
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .back-btn,
+        .next-btn {
+            background-color: var(--purple);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-btn:hover,
+        .next-btn:hover {
+            background-color: #3a025c;
+        }
+
+        .back-btn {
+            background-color: var(--purple);
+        }
+
+        .results {
+            text-align: center;
+        }
+
+        .score {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .warning-icon {
+            color: #f9a620;
+            font-size: 1.5rem;
+            margin-right: 5px;
+        }
+
+        .assessment {
+            margin-bottom: 30px;
+        }
+
+        .email-form {
+            margin: 30px 0;
+        }
+
+        .email-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .send-report-btn {
+            background-color: var(--purple);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .strategy-session-btn {
+            background-color: var(--purple);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            text-decoration: none;
+        }
+
+        .or-divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            color: #666;
+        }
+
+        .or-divider::before,
+        .or-divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: #ccc;
+        }
+
+        .or-divider span {
+            padding: 0 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="homepage.html">
+                    <img src="assets/Clear for dark background.png" alt="ENGAGE INTELLIGENTLY">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="homepage.html" class="nav-link">Home</a>
+                <a href="our-story.html" class="nav-link">Our Story</a>
+                <a href="insights.html" class="nav-link">Insights</a>
+                <a href="index.html" class="nav-link">Engage +</a>
+                <a href="#" class="contact-btn">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="quiz-container">
+            <!-- Question 1 -->
+            <div class="quiz-card" id="question1">
+                <div class="question-number">Question 1 of 6</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 16.67%"></div>
+                </div>
+                <div class="question-text">1. Have you clearly defined your target population's demographics, health
+                    context, and daily priorities?</div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q1-yes" name="q1" value="yes">
+                        <label for="q1-yes">Yes</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q1-somewhat" name="q1" value="somewhat">
+                        <label for="q1-somewhat">Somewhat</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q1-no" name="q1" value="no">
+                        <label for="q1-no">No</label>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <div></div> <!-- Empty div for spacing -->
+                    <button class="next-btn" onclick="showQuestion(2)">Next</button>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="quiz-card hidden" id="question2">
+                <div class="question-number">Question 2 of 6</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 33.33%"></div>
+                </div>
+                <div class="question-text">2. Have you reviewed existing evidence or case studies relevant to your
+                    population, setting, or disease area?</div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q2-yes" name="q2" value="yes">
+                        <label for="q2-yes">Yes</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q2-somewhat" name="q2" value="somewhat">
+                        <label for="q2-somewhat">Somewhat</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q2-no" name="q2" value="no">
+                        <label for="q2-no">No</label>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <button class="back-btn" onclick="showQuestion(1)">Back</button>
+                    <button class="next-btn" onclick="showQuestion(3)">Next</button>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="quiz-card hidden" id="question3">
+                <div class="question-number">Question 3 of 6</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 50%"></div>
+                </div>
+                <div class="question-text">3. Have you used existing or new data-driven evidence to reduce drop-out and
+                    participant burden?</div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q3-yes" name="q3" value="yes">
+                        <label for="q3-yes">Yes</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q3-somewhat" name="q3" value="somewhat">
+                        <label for="q3-somewhat">Somewhat</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q3-no" name="q3" value="no">
+                        <label for="q3-no">No</label>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <button class="back-btn" onclick="showQuestion(2)">Back</button>
+                    <button class="next-btn" onclick="showQuestion(4)">Next</button>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="quiz-card hidden" id="question4">
+                <div class="question-number">Question 4 of 6</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 66.67%"></div>
+                </div>
+                <div class="question-text">4. Have you involved patient or public representatives to optimise
+                    engagement?
+                </div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q4-yes" name="q4" value="yes">
+                        <label for="q4-yes">Yes</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q4-somewhat" name="q4" value="somewhat">
+                        <label for="q4-somewhat">Somewhat</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q4-no" name="q4" value="no">
+                        <label for="q4-no">No</label>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <button class="back-btn" onclick="showQuestion(3)">Back</button>
+                    <button class="next-btn" onclick="showQuestion(5)">Next</button>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="quiz-card hidden" id="question5">
+                <div class="question-number">Question 5 of 6</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 83.33%"></div>
+                </div>
+                <div class="question-text">5. Have your participant recruitment materials been tested in a real-world
+                    setting?</div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q5-yes" name="q5" value="yes">
+                        <label for="q5-yes">Yes</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q5-somewhat" name="q5" value="somewhat">
+                        <label for="q5-somewhat">Somewhat</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q5-no" name="q5" value="no">
+                        <label for="q5-no">No</label>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <button class="back-btn" onclick="showQuestion(4)">Back</button>
+                    <button class="next-btn" onclick="showQuestion(6)">Next</button>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="quiz-card hidden" id="question6">
+                <div class="question-number">Question 6 of 6</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%"></div>
+                </div>
+                <div class="question-text">6. Are you confident your study is accessible to underrepresented groups
+                    (e.g.,
+                    in terms of location, language, digital access)?</div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q6-yes" name="q6" value="yes">
+                        <label for="q6-yes">Yes</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q6-somewhat" name="q6" value="somewhat">
+                        <label for="q6-somewhat">Somewhat</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q6-no" name="q6" value="no">
+                        <label for="q6-no">No</label>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <button class="back-btn" onclick="showQuestion(5)">Back</button>
+                    <button class="next-btn" onclick="showResults()">See Results</button>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="quiz-card hidden" id="results">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%"></div>
+                </div>
+                <div class="navigation" style="justify-content: flex-start; margin-top: 0; margin-bottom: 20px;">
+                    <button class="back-btn" onclick="showQuestion(6)">Back</button>
+                </div>
+                <div class="results">
+                    <div class="score">Your Score: 8/12</div>
+                    <div class="assessment">
+                        <span class="warning-icon">⚠️</span> Solid groundwork — but there's opportunity to strengthen.
+                    </div>
+                    <h2>Want your full results + tailored recommendations?</h2>
+                    <div class="email-form">
+                        <input type="email" class="email-input" placeholder="Enter your email" required>
+                        <button class="send-report-btn">
+                            <span>📄</span> Send My Report
+                        </button>
+                    </div>
+                    <div class="or-divider">
+                        <span>or...</span>
+                    </div>
+                    <a href="https://calendar.google.com/calendar/u/0/r" class="strategy-session-btn" target="_blank">
+                        <span>📅</span> Book a Strategy Session
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-company-name">Engage Intelligently</div>
+            <div class="footer-links">
+                <a href="terms.html" class="footer-link">Terms of Service</a>
+                <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Contact Us</a>
+            </div>
+            <div class="footer-copyright">© 2025 Engage Intelligently. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        function showQuestion(questionNumber) {
+            // Hide all questions
+            document.querySelectorAll('.quiz-card').forEach(card => {
+                card.classList.add('hidden');
+            });
+
+            // Show the selected question
+            document.getElementById('question' + questionNumber).classList.remove('hidden');
+        }
+
+        function showResults() {
+            // Hide all questions
+            document.querySelectorAll('.quiz-card').forEach(card => {
+                card.classList.add('hidden');
+            });
+
+            // Show results
+            document.getElementById('results').classList.remove('hidden');
+        }
+    </script>
+</body>
+
+</html>

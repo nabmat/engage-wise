@@ -104,7 +104,7 @@
 /* CTA Section */
 .cta-section {
     padding: 1.5rem 0;
-    background-color: var(--white);
+    background-color: var(--purple);
 }
 
 .cta-content {
@@ -117,7 +117,7 @@
 .cta-content p {
     font-family: 'Segoe UI', sans-serif;
     font-size: 1.1rem;
-    color: var(--purple);
+    color: var(--white);
     margin: 0;
 }
 
