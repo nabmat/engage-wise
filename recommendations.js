@@ -753,7 +753,8 @@ async function saveProject(name, description) {
             updatedAt: new Date().toISOString(),
             recommendations: cleanRecommendations,
             userInput: cleanUserInput,
-            userId: user.uid
+            userId: user.uid,
+            isStarredCollection: true // Automatically star all new studies
         };
 
         console.log('Project data prepared:', projectData.name);

@@ -105,6 +105,7 @@ function createDemoStudies() {
                     }
                 }
             ],
+            isStarredCollection: true,
             _source: 'demo'
         }
     ];
@@ -127,7 +128,9 @@ async function loadUserStudies(userId) {
         // First try to load from localStorage
         console.log('Loading studies from localStorage...');
         const localStudies = loadStudiesFromLocalStorage(userId);
-        console.log('Local studies loaded:', localStudies.length);
+        // Filter to only show starred studies
+        const starredLocalStudies = localStudies.filter(study => study.isStarredCollection === true);
+        console.log('Starred local studies loaded:', starredLocalStudies.length);
 
         // Then try to load from Firestore
         let firestoreStudies = [];
@@ -145,7 +148,8 @@ async function loadUserStudies(userId) {
             const studiesRef = db.collection('users').doc(userId).collection('studies');
             console.log('Studies reference created');
 
-            const snapshot = await studiesRef.orderBy('createdAt', 'desc').get();
+            // Only get starred studies from Firestore
+            const snapshot = await studiesRef.where('isStarredCollection', '==', true).orderBy('createdAt', 'desc').get();
             console.log('Snapshot received, empty:', snapshot.empty);
 
             if (!snapshot.empty) {
@@ -165,7 +169,7 @@ async function loadUserStudies(userId) {
         }
 
         // Add source marker to local studies
-        const markedLocalStudies = localStudies.map(study => ({
+        const markedLocalStudies = starredLocalStudies.map(study => ({
             ...study,
             _source: 'local'
         }));
@@ -224,11 +228,11 @@ async function loadUserStudies(userId) {
 
         if (allStudies.length === 0) {
             // This should never happen now with demo data, but just in case
-            console.log('No studies found even after adding demos');
+            console.log('No starred studies found even after adding demos');
             studiesList.innerHTML = `
                 <div class="no-studies-message">
-                    <p>You don't have any saved studies yet.</p>
-                    <a href="create-study.html" class="get-started-btn">Get Started</a>
+                    <p>You don't have any starred studies.</p>
+                    <a href="create-study.html" class="get-started-btn">Create New Study</a>
                 </div>
             `;
             return;
@@ -267,7 +271,7 @@ async function loadUserStudies(userId) {
     }
 }
 
-// Load studies from localStorage
+// Load studies from localStorage and ensure new studies are automatically starred
 function loadStudiesFromLocalStorage(userId) {
     try {
         console.log('Loading studies from localStorage for user:', userId);
@@ -401,7 +405,12 @@ function createStudyCard(studyId, studyData) {
     starButton.className = `star-icon ${starClass}`;
     starButton.setAttribute('aria-label', 'bookmark');
     starButton.textContent = starIcon;
-    starButton.disabled = true; // Disable the star button in the My Studies view
+
+    // Add event listener for star button
+    starButton.addEventListener('click', function (event) {
+        event.stopPropagation();
+        toggleStarredStatus(studyId, card);
+    });
 
     // Create text content
     const textContent = document.createElement('div');
@@ -502,6 +511,114 @@ function toggleCardExpansion(button) {
 
 // Make toggleCardExpansion available globally
 window.toggleCardExpansion = toggleCardExpansion;
+
+// Toggle starred status of a study
+async function toggleStarredStatus(studyId, cardElement) {
+    try {
+        const user = firebase.auth().currentUser;
+        if (!user) {
+            console.error('No user logged in');
+            return;
+        }
+
+        // Get the star button
+        const starButton = cardElement.querySelector('.star-icon');
+
+        // Toggle the star status
+        const isCurrentlyStarred = starButton.textContent === '★';
+        const newStarredStatus = !isCurrentlyStarred;
+
+        // Update the UI
+        if (newStarredStatus) {
+            starButton.textContent = '★';
+            starButton.classList.add('active');
+        } else {
+            starButton.textContent = '☆';
+            starButton.classList.remove('active');
+
+            // Remove the card from the view with animation
+            cardElement.style.transition = 'opacity 0.5s, transform 0.5s';
+            cardElement.style.opacity = '0';
+            cardElement.style.transform = 'scale(0.9)';
+
+            setTimeout(() => {
+                cardElement.remove();
+
+                // Check if there are no studies left
+                const studiesList = document.getElementById('studiesList');
+                if (studiesList && studiesList.children.length === 0) {
+                    studiesList.innerHTML = `
+                        <div class="no-studies-message">
+                            <p>You don't have any starred studies.</p>
+                            <a href="create-study.html" class="get-started-btn">Create New Study</a>
+                        </div>
+                    `;
+                }
+            }, 500);
+        }
+
+        // Update in localStorage
+        updateStudyStarredStatusInLocalStorage(studyId, newStarredStatus, user.uid);
+
+        // Update in Firestore if available
+        try {
+            if (firebase.firestore) {
+                const db = firebase.firestore();
+                const studyRef = db.collection('users').doc(user.uid).collection('studies').doc(studyId);
+                await studyRef.update({
+                    isStarredCollection: newStarredStatus
+                });
+                console.log('Updated study starred status in Firestore');
+            }
+        } catch (firestoreError) {
+            console.warn('Could not update study in Firestore:', firestoreError);
+            // Continue with local storage update only
+        }
+
+    } catch (error) {
+        console.error('Error toggling starred status:', error);
+    }
+}
+
+// Update study starred status in localStorage
+function updateStudyStarredStatusInLocalStorage(studyId, isStarred, userId) {
+    try {
+        // First check the direct key
+        const directKey = `engagewise_${studyId}`;
+        const studyJson = localStorage.getItem(directKey);
+
+        if (studyJson) {
+            const studyData = JSON.parse(studyJson);
+            studyData.isStarredCollection = isStarred;
+            localStorage.setItem(directKey, JSON.stringify(studyData));
+            console.log('Updated study in localStorage directly');
+            return;
+        }
+
+        // Check the projects index
+        const projectsIndexKey = 'engagewise_projects_index';
+        const projectsIndexJson = localStorage.getItem(projectsIndexKey);
+
+        if (projectsIndexJson) {
+            const projectsIndex = JSON.parse(projectsIndexJson);
+            const projectEntry = projectsIndex.find(p => p.id === studyId && p.userId === userId);
+
+            if (projectEntry) {
+                const projectKey = `engagewise_${projectEntry.id}`;
+                const projectJson = localStorage.getItem(projectKey);
+
+                if (projectJson) {
+                    const projectData = JSON.parse(projectJson);
+                    projectData.isStarredCollection = isStarred;
+                    localStorage.setItem(projectKey, JSON.stringify(projectData));
+                    console.log('Updated study in localStorage via index');
+                }
+            }
+        }
+    } catch (error) {
+        console.error('Error updating localStorage:', error);
+    }
+}
 
 // Ensure demo data is shown if page is loaded for 3 seconds with no content
 // Use a longer timeout to give real data more time to load
