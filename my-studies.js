@@ -449,12 +449,27 @@ function createStudyCard(studyId, studyData) {
             <p>Created on ${formattedDateTime}</p>
             <p><strong>Recommendations:</strong> ${recommendationsCount} strategies</p>
             <div class="view-details-btn">
-                <a href="study-details.html?id=${studyId}" class="view-btn">View Full Details</a>
+                <a href="study-details.html?id=${studyId}" class="view-btn" id="viewBtn_${studyId}">View Full Details</a>
             </div>
         </div>
     `;
 
     card.appendChild(expandedContent);
+
+    // Add event listener to ensure the entire button area is clickable
+    setTimeout(() => {
+        const viewBtn = document.getElementById(`viewBtn_${studyId}`);
+        if (viewBtn) {
+            viewBtn.addEventListener('click', function (e) {
+                window.location.href = `study-details.html?id=${studyId}`;
+            });
+
+            // Make sure the entire button area is clickable
+            viewBtn.style.display = 'block';
+            viewBtn.style.width = '100%';
+            viewBtn.style.textAlign = 'center';
+        }
+    }, 0);
 
     return card;
 }

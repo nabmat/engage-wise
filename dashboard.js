@@ -49,17 +49,44 @@ document.getElementById('logoutBtn').addEventListener('click', async (e) => {
 });
 
 // Handle button clicks
-document.querySelector('.create-study-btn').addEventListener('click', () => {
+const createStudyBtn = document.getElementById('createStudyBtn');
+const myStudiesBtn = document.getElementById('myStudiesBtn');
+const watchTutorialBtn = document.getElementById('watchTutorialBtn');
+
+// Use the full button element for click events
+createStudyBtn.addEventListener('click', function () {
     window.location.href = 'create-study.html';
 });
 
-document.querySelector('.my-studies-btn').addEventListener('click', () => {
+myStudiesBtn.addEventListener('click', function () {
     window.location.href = 'my-studies.html';
 });
 
-document.querySelector('.watch-tutorial-btn').addEventListener('click', () => {
+watchTutorialBtn.addEventListener('click', function () {
     // Add your tutorial logic here
     alert('Tutorial feature coming soon!');
+});
+
+// Add additional event listeners for child elements to ensure clicks propagate correctly
+createStudyBtn.querySelectorAll('*').forEach(child => {
+    child.addEventListener('click', function (e) {
+        e.stopPropagation();
+        window.location.href = 'create-study.html';
+    });
+});
+
+myStudiesBtn.querySelectorAll('*').forEach(child => {
+    child.addEventListener('click', function (e) {
+        e.stopPropagation();
+        window.location.href = 'my-studies.html';
+    });
+});
+
+watchTutorialBtn.querySelectorAll('*').forEach(child => {
+    child.addEventListener('click', function (e) {
+        e.stopPropagation();
+        alert('Tutorial feature coming soon!');
+    });
 });
 
 // Handle profile settings
